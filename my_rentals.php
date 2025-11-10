@@ -231,10 +231,10 @@ $result = $conn->query($query);
                                     <?php echo date('M d, Y', strtotime($rental['DUE_DATE'])); ?>
                                 </div>
                             </div>
-                            <?php if ($rental['ACTUAL_RETURN_DATE']): ?>
+                            <?php if ($rental['RETURN_DATE']): ?>
                                 <div class="detail-item">
                                     <div class="detail-label">Return Date</div>
-                                    <div class="detail-value"><?php echo date('M d, Y', strtotime($rental['ACTUAL_RETURN_DATE'])); ?></div>
+                                    <div class="detail-value"><?php echo date('M d, Y', strtotime($rental['RETURN_DATE'])); ?></div>
                                 </div>
                             <?php endif; ?>
                         </div>

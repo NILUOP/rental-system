@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Update rental
         $update_rental = "UPDATE RENTALS 
                          SET STATUS = 'RETURNED', 
-                             ACTUAL_RETURN_DATE = '$return_date', 
+                             RETURN_DATE = '$return_date', 
                              PENALTY = $penalty 
                          WHERE RID = $rental_id";
         $conn->query($update_rental);

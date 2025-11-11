@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="container">
-        <h2>Register</h2>
+        <h2 class="main-form-group">Register</h2>
         
         <?php if ($error): ?>
             <div class="error"><?php echo $error; ?></div>
@@ -63,27 +63,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
         
         <form method="POST" action="">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="uname" required>
+            <div class="main-form-group">
+                <div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="uname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="uemail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="upassword" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="confirm_password" required>
+                    </div>
+                    
+                    <button type="submit">Register</button>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="uemail" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="upassword" required>
-            </div>
-            
-            <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" required>
-            </div>
-            
-            <button type="submit">Register</button>
         </form>
         
         <div class="login-link">

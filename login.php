@@ -51,24 +51,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
+        <h2 class="main-form-group">Login</h2>
         
         <?php if ($error): ?>
             <div class="error"><?php echo $error; ?></div>
         <?php endif; ?>
         
         <form method="POST" action="">
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="uname" required>
+            <div class="main-form-group">
+                <div>
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="uname" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="upassword" required>
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="upassword" required>
-            </div>
-            
-            <button type="submit">Login</button>
         </form>
         
         <div class="register-link">

@@ -63,38 +63,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php endif; ?>
             
             <form method="POST" action="">
-                <div class="form-group">
-                    <label>Item Name *</label>
-                    <input type="text" name="iname" required placeholder="e.g., Canon EOS 5D Camera">
+                <div class="main-form-group">
+                    <div>
+
+                        <div class="form-group">
+                            <label>Item Name *</label>
+                            <input type="text" name="iname" required placeholder="e.g., Canon EOS 5D Camera">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Category *</label>
+                            <select name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Cameras">Cameras</option>
+                                <option value="Tools">Tools</option>
+                                <option value="Sports">Sports Equipment</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Vehicles">Vehicles</option>
+                                <option value="Books">Books</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Rent Per Day (₹) *</label>
+                            <input type="number" name="rent_per_day" step="0.01" min="0.01" required placeholder="e.g., 500.00">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Penalty Per Day (₹) *</label>
+                            <input type="number" name="penalty_per_day" step="0.01" min="0.01" required placeholder="e.g., 100.00">
+                            <small style="color: #666; font-size: 12px;">Charged for late returns</small>
+                        </div>
+                        
+                        <button type="submit">Add Item</button>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label>Category *</label>
-                    <select name="category" required>
-                        <option value="">Select Category</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Cameras">Cameras</option>
-                        <option value="Tools">Tools</option>
-                        <option value="Sports">Sports Equipment</option>
-                        <option value="Furniture">Furniture</option>
-                        <option value="Vehicles">Vehicles</option>
-                        <option value="Books">Books</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label>Rent Per Day (₹) *</label>
-                    <input type="number" name="rent_per_day" step="0.01" min="0.01" required placeholder="e.g., 500.00">
-                </div>
-                
-                <div class="form-group">
-                    <label>Penalty Per Day (₹) *</label>
-                    <input type="number" name="penalty_per_day" step="0.01" min="0.01" required placeholder="e.g., 100.00">
-                    <small style="color: #666; font-size: 12px;">Charged for late returns</small>
-                </div>
-                
-                <button type="submit">Add Item</button>
             </form>
         </div>
     </div>

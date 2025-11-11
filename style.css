@@ -560,10 +560,11 @@ tr:hover {
 
 .filter-row input {
     flex: 1;
+    min-width: 200px;
 }
 
 .filter-row select {
-    min-width: 200px;
+    width: 250px;
 }
 
 .filter-row input,
@@ -575,6 +576,7 @@ tr:hover {
 .filter-row a {
     padding: 10px 25px;
     white-space: nowrap;
+    max-width: 150px;
 }
 
 /* === ITEM INFO === */

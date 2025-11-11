@@ -71,6 +71,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent Item - Rental System</title>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function calculateTotal() {
+            const days = document.getElementById('rent_days').value || 0;
+            const rentPerDay = <?php echo $item['RENT_PER_DAY']; ?>;
+            const total = days * rentPerDay;
+            document.getElementById('totalAmount').textContent = '₹' + total.toFixed(2);
+            document.getElementById('dueDate').textContent = getDueDate(days);
+        }
+        
+        function getDueDate(days) {
+            const today = new Date();
+            today.setDate(today.getDate() + parseInt(days));
+            return today.toLocaleDateString('en-IN', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
+    </script>
 </head>
 <body>
     <div class="navbar">
